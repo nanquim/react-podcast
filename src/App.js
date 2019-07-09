@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header'
-import Home from './components/Home'
+import Home from './views/Home'
 import {theme, GlobalStyle} from './Styles'
 import { ThemeProvider } from 'styled-components'
 

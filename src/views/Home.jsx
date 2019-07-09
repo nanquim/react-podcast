@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
-import { Search } from '../components/Search'
-import { Content } from '../components/Content'
-import { PodcastCard } from '../components/PodcastCard'
+import React, { useState, useEffect } from 'react'
+import Search from '../components/Search'
+import Content from '../components/Content'
+import PodcastCard from '../components/PodcastCard'
+import { api } from '../../services/api'
+
 const [ loading, setLoading ] = useState(true)
 const [ podcasts, setPodcasts ] = useState([])
 const [ filterPodcasts, podcastFilter ] = useState([])
@@ -20,7 +22,7 @@ useEffect(() => {
         setPodcasts(podcasts)
         setLoading(false)
     }
-    loadPoadcast()
+    loadPodcast()
 }, [])
 
 useEffect(() => {

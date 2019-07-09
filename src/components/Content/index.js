@@ -3,11 +3,16 @@ import { Container } from './style'
 import PodcastCard from '../PodcastCard'
 import { api } from '../../services'
 
-const Content = ({podcast, loading}) => {
+const Content = ({podcasts, loading}) => {
     return(
         <Container>
-            
+            {!loading && 
+            podcasts.map(podcast => <PodcastCard 
+            key={podcast.id} 
+            podcast={podcast} />)}
             <PodcastCard />
         </Container>
     )
 }
+
+export default Content

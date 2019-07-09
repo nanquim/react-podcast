@@ -1,4 +1,16 @@
-import Reacy from 'react'
+import React from 'react'
+import { Container, InputContent } from './style.js'
+
+const useInputValue = ({initialValue, placeholder}) => {
+    const [value, setValue] = useState(initialValue)
+
+    return{
+        value,
+        placeholder,
+        onChange: event => setValue(event.target.value)
+    }
+}
+
 
 const Search = () => {
  return(
@@ -15,3 +27,5 @@ const Search = () => {
  )
  
 }
+
+export default Search
